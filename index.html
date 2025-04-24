@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sarwar Alam | Cybersecurity Specialist</title>
+    <style>
+        :root {
+            --primary: #0d1b2a;
+            --secondary: #1b263b;
+            --accent: #0077b6;
+            --text-light: #e0e1dd;
+            --text-dark: #000;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--primary);
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            background-color: var(--primary);
+            padding: 1rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav a {
+            color: var(--text-light);
+            padding: 1rem;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease-in-out;
+        }
+
+        nav a:hover {
+            color: var(--accent);
+        }
+
+        .hero {
+            display: flex;
+            align-items: center;
+            padding: 4rem 1rem 2rem;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .hero img {
+            border-radius: 12px;
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border: 4px solid var(--accent);
+        }
+
+        .hero-text {
+            max-width: 800px;
+			display: flex;
+			align-items: center;
+			gap: 0.3rem;
+			flex-wrap: wrap;
+        }
+
+        .hero-text h1 {
+            font-size: 2.5rem;
+            color: var(--accent);
+            margin-right: 1rem;
+        }
+
+        .hero-text .title {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            min-height: 1.5em;
+            background-color: rgba(0, 119, 182, 0.2);
+            padding: 0.2rem 0.5rem;
+            border-radius: 5px;
+            display: inline-block;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+
+        .hero-text p {
+            font-size: 1rem;
+            color: var(--text-light);
+            margin: 0;
+			max-width: 1000px;
+        }
+
+        .social-icons {
+            margin-top: 1rem;
+        }
+
+        .social-icons a {
+            margin: 0 10px;
+            color: var(--accent);
+            font-size: 1.8rem;
+            transition: color 0.3s;
+        }
+
+        .social-icons a:hover {
+            color: #00b4d8;
+        }
+
+        section {
+            padding: 3rem 1.5rem;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: var(--accent);
+            border-bottom: 2px solid var(--accent);
+            padding-bottom: 0.5rem;
+        }
+
+         .certifications, .services, .experience {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+		
+		.skills{
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+		
+		.projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .card {
+            background-color: var(--secondary);
+            padding: 1.5rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card i {
+            display: block;
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: var(--accent);
+        }
+
+        .card ul {
+            list-style-type: disc;
+            margin-left: 1.5rem;
+        }
+
+        form {
+            display: grid;
+            gap: 1rem;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        input, textarea {
+            padding: 0.75rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1rem;
+            width: 100%;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        button {
+            background-color: var(--accent);
+            color: var(--text-light);
+            border: none;
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+            font-size: 0.9rem;
+        }
+
+        button:hover {
+            background-color: #0096c7;
+        }
+        footer {
+            text-align: center;
+            padding: 1.5rem;
+            background-color: var(--secondary);
+            font-size: 0.9rem;
+            margin-top: 3rem;
+        }
+
+@media (max-width: 768px) {
+    nav {
+        /* Remove flex-direction: column to keep it horizontal */
+        padding: 0.5rem;
+		overflow-x: auto;
+    white-space: nowrap;
+    }
+    nav a {
+        padding: 0.5rem; /* Reduce padding for smaller screens */
+        font-size: 0.9rem; /* Slightly smaller font size */
+    }
+    .hero {
+        flex-direction: column;
+    }
+    .hero-text h1 {
+        font-size: 2rem;
+    }
+    h2 {
+        font-size: 1.5rem;
+    }
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+}
+
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <nav>
+        <a href="#hero">Home</a>
+        <a href="#services">Services</a>
+        <a href="#experience">Experience</a>
+        <a href="#education">Education</a>
+        <a href="#certifications">Certifications</a>
+		<a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+    </nav>
+
+    <section class="hero" id="hero">
+        <img src="profile.png" alt="Sarwar Alam">
+        <div class="hero-text">
+            <h1>Sarwar Alam S.</h1>
+            <div class="title" id="rotating-title"></div>
+            <p>Cybersecurity professional with 4+ years of experience in application development and security, specializing in innovative, secure solutions. Holds E|CIH, ISC2 CC, Microsoft SC-900, Microsoft AZ-900 and a Master’s in Cybersecurity from DTU, eager to excel in a junior cybersecurity role.</p>
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/sarwaralamsajib/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/sarwaralamsb" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="mailto:sarwaralampro@gmail.com"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </section>
+
+
+<section id="services">
+    <h2>Services</h2>
+    <div class="services">
+        <div class="card">
+            <i class="fas fa-shield-alt"></i><b>Incident Handling & Response</b>
+            <p>Efficient detection, analysis, containment, and recovery from cyber incidents using frameworks like NIST and MITRE ATT&CK.</p>
+        </div>
+        <div class="card">
+            <i class="fas fa-chalkboard-teacher"></i><b>Security Awareness Training</b>
+            <p>Conduct phishing simulations and train employees to identify and respond to social engineering threats, improving overall security posture.</p>
+        </div>
+        <div class="card">
+            <i class="fas fa-search"></i> <b>Vulnerability Assessment & Threat Hunting</b>
+            <p>Identify, analyze, and report on system weaknesses using tools like Nmap, Nessus, and MITRE ATT&CK to mitigate potential risks.</p>
+        </div>
+        <div class="card">
+            <i class="fas fa-file-alt"></i> <b>Security Documentation & Compliance</b>
+            <p>Draft security policies, procedures, and incident response playbooks aligned with ISO 27001, NIST, and GDPR compliance standards.</p>
+        </div>
+        <div class="card">
+            <i class="fas fa-user-shield"></i> <b>Identity & Access Management (IAM)</b>
+            <p>Implement and manage secure authentication, role-based access controls, and privileged access solutions to safeguard sensitive data.</p>
+        </div>
+        <div class="card">
+            <i class="fas fa-headset"></i> <b>Technical Support & Endpoint Security</b>
+            <p>Provide end-user support, secure configurations, malware defense, and patch management across Windows, macOS, and Linux environments.</p>
+        </div>
+        <div class="card">
+            <i class="fas fa-chart-line"></i> <b>Data Analysis & Reporting</b>
+            <p>Utilize Python, Pandas, and SQL to process, analyze, and present data for informed business decision-making and cybersecurity strategies.</p>
+        </div>
+    </div>
+</section>
+
+
+    <section id="experience">
+        <h2>Experience</h2>
+        <div class="experience">
+            <div class="card">
+                <strong>Pelican Self Storage (2022-2025)</strong><br>
+                IT Application Assistant - Virum, Denmark<br>
+                <ul>
+                    <li>Enhanced application features, improving efficiency by 40% and security.</li>
+					<li>Supported incident response, reducing phishing clicks by 25%.</li>
+					<li>Contributed to system integration, boosting security posture.</li>
+					<li>Optimized database performance and automated SQL reporting, saving 30+ hours/month.</li>
+					<li>Provided technical support, ensuring system functionality and security.</li>
+
+                </ul>
+            </div>
+            <div class="card">
+                <strong>Netizen Testing (2018-2019)</strong><br>
+                QA Engineer - Remote<br>
+                <ul>
+                    <li>Tested apps for data integrity, functionality, and security.</li>
+					<li>Reviewed test results for errors, usability, and vulnerabilities.</li>
+					<li>Created reports highlighting security issues and user experience improvements.</li>
+                </ul>
+            </div>
+            <div class="card">
+                <strong>Internexia (2018-2019)</strong><br>
+                Android Developer Intern - Malaysia<br>
+                <ul>
+                    <li>Developed Android apps with Google/Facebook login integration.</li>
+					<li>Implemented security features to protect user data.</li>
+					<li>Integrated Firebase for real-time cloud storage and improved app performance.</li>
+					<li>Contributed to web design and content management to boost user engagement.</li>
+					<li>Assisted in preparing client reports and presentations.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="education">
+        <h2>Education</h2>
+        <p>
+            <strong>MSc in Computer Science & Engineering (Cybersecurity)</strong><br>
+            <b>Technical University of Denmark</b>, 2021–2023<br>
+            Courses: Data Security, Computer Security Incident Response, Network Security,
+			Computer Security Forensic, Modern Cryptology, Applied Cryptography, Ethical Hacking,
+			Current Topics in System Security, Biometric Systems, 
+			Formal Aspects of Software Engineering,
+			Foundations of distributed systems, 
+			Logical Systems and Logic Programming, 
+			Model-Based Systems Engineering, System integration, 
+			TEMO (Technology, management, organisation and business models).<br><br>
+
+            <strong>BSc in Computer Science</strong><br>
+            <b>Limkokwing University of Creative Technology</b>, 2016–2019<br>
+            Focused on Software Development, Cybersecurity, and Mobile Application Design
+        </p>
+    </section>
+
+    <section id="certifications">
+        <h2>Certifications</h2>
+        <div class="certifications">
+            <div class="card"><b>EC-Council Certified Incident Handler (ECIH)</b></div>
+            <div class="card"><b>ISC2 Certified in Cybersecurity (CC)</b></div>
+			<div class="card"><b>Microsoft SC-900: Security, Compliance, and Identity Fundamentals</b></div>
+		    <div class="card"><b>Microsoft AZ-900: Azure Fundamentals</b></div>
+			<div class="card"><b>DTU Certified Cybersecurity Specialist</b></div>
+            <div class="card"><b>Splunk Engineer</b>, LetsDefend</div>
+            <div class="card"><b>Threat Intelligence Analyst</b>, arcX</div>
+			<div class="card"><b>Foundations of Threat Hunting</b>, Picus Security</div>
+			<div class="card"><b>Cybersecurity Essentials</b>, Cisco</div>
+			<div class="card"><b>Microsoft SC-300: Identity & Access Admin</b> (Ongoing)</div>
+            <div class="card"><b>Microsoft CompTIA Security+</b> (Ongoing)</div>
+
+        </div>
+    </section>
+	
+
+   <section id="skills">
+        <h2>Skills</h2>
+        <div class="skills">
+            <div class="card"><i class="fas fa-shield-alt"></i><b>Cybersecurity</b>
+				<li>Incident Response, SIEM (Splunk), Threat Hunting.</li>
+				<li>Vulnerability Assessment (Nmap, Nessus, MITRE ATT&CK).</li>
+				<li>IAM, Microsoft Defender, Entra ID, VPNs, Firewalls.</li>
+				<li>OWASP Top 10, Cryptography, Security Training (KnowBe4).</li>
+			</div>
+
+			<div class="card"><i class="fas fa-cloud"></i><b>Cloud & IT</b>
+				<li>Azure, Google Cloud, Microsoft 365 Administration.</li>
+				<li>System Admin (Windows, macOS, Linux), PowerShell.</li>
+			</div>
+
+			<div class="card"><i class="fas fa-code"></i><b>Programming</b>
+				<li>Python, SQL, Java, C#, HTML, CSS, JavaScript.</li>
+			</div>
+
+			</div>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="projects">
+            <div class="card">
+                <strong>Password Generator and Strength Analyzer</strong><br>
+                <ul>
+                    <li>Built a Streamlit app for password strength analysis and generation using Python.</li>
+                </ul>
+            </div>
+            <div class="card">
+                <strong>Basic HTTP Firewall Server with Malicious Header Detection</strong><br>
+                <ul>
+<li>Created an HTTP firewall to detect and block malicious headers with customizable rules.</li>
+
+                </ul>
+            </div>
+            <div class="card">
+                <strong>Predictive Analytics for Security Incident Classification</strong><br>
+                <ul>
+                  <li>Developed a model to classify cybersecurity incidents using logistic regression in Python.</li>
+                </ul>
+            </div>
+            <div class="card">
+                <strong>Master’s Thesis: Fuzzing Smart Contracts in Blockchain</strong><br>
+                <ul>
+                    <li>Designed E2Bfuzzer, a smart contract fuzzer for Ethereum using Bytecode, ABI, and Mythril.</li>
+                </ul>
+            </div>
+            <div class="card">
+                <strong>Detection of Synthetic Face Images Generated by GANs</strong><br>
+                <ul>
+                    <li>Reviewed and compared GAN-generated face detection methods, focusing on social media privacy risks.</li>
+                </ul>
+            </div>
+            <div class="card">
+                <strong>Enhancing User Privacy in Public Transport Systems</strong><br>
+                <ul>
+					<li>Designed a pseudonym-based public transport system to enhance user privacy and billing accuracy.</li>
+                </ul>
+            </div>
+            <div class="card">
+                <strong>Wireless Sensor Network for Wildfire Detection</strong><br>
+                <ul>
+                    <li>Built a wildfire detection system using LoRa mesh network in OMNET++ for early alerts.</li>
+                </ul>
+            </div>
+            <div class="card">
+                <strong>IoT Ransomware Detection Using Fog Layer Security</strong><br>
+                <ul>
+					<li>Created a fog-layer-based ML system to detect and block IoT ransomware via Opcode analysis.</li>
+                </ul>
+            </div>
+            <div class="card">
+                <strong>Implementing Access Control in Client/Server Applications</strong><br>
+                <ul>
+					<li>Implemented ACL and RBAC in a print server for secure role-based access control.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2025 Sarwar Alam. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const titles = [
+            "Cybersecurity Specialist",
+			"Software Developer",
+            "SOC Analyst",
+			"Certified Incident Handler",
+            "MSc. Cybersecurity from DTU"
+        ];
+        let currentTitleIndex = 0;
+        const titleElement = document.getElementById("rotating-title");
+
+        function typeTitle(title, callback) {
+            titleElement.textContent = "";
+            let i = 0;
+            function type() {
+                if (i < title.length) {
+                    titleElement.textContent += title.charAt(i);
+                    i++;
+                    setTimeout(type, 100); // Adjust typing speed (100ms per letter)
+                } else {
+                    setTimeout(callback, 2000); // Pause before switching to next title
+                }
+            }
+            type();
+        }
+
+        function rotateTitle() {
+            const currentTitle = titles[currentTitleIndex];
+            typeTitle(currentTitle, () => {
+                currentTitleIndex = (currentTitleIndex + 1) % titles.length;
+                rotateTitle();
+            });
+        }
+
+        rotateTitle(); // Start the title rotation
+    </script>
+</body>
+
+</html>
