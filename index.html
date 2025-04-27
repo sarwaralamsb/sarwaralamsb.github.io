@@ -6,250 +6,266 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sarwar Alam | Cybersecurity Specialist</title>
     <style>
-        :root {
-            --primary: #0d1b2a;
-            --secondary: #1b263b;
-            --accent: #0077b6;
-            --text-light: #e0e1dd;
-            --text-dark: #000;
-        }
+  :root {
+    --primary: #0d1b2a;
+    --secondary: #1b263b;
+    --accent: #0077b6;
+    --text-light: #e0e1dd;
+    --text-dark: #000;
+}
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            scroll-behavior: smooth;
-        }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
 
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: var(--primary);
-            color: var(--text-light);
-            line-height: 1.6;
-        }
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--primary);
+    color: var(--text-light);
+    line-height: 1.6;
+}
 
-        nav {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            background-color: var(--primary);
-            padding: 1rem;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.3);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
+nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: var(--primary);
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
 
-        nav a {
-            color: var(--text-light);
-            padding: 1rem;
-            text-decoration: none;
-            font-weight: 500;
-            transition: all 0.3s ease-in-out;
-        }
+nav a {
+    color: var(--text-light);
+    padding: 1rem;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease-in-out;
+}
 
-        nav a:hover {
-            color: var(--accent);
-        }
+nav a:hover {
+    color: var(--accent);
+}
 
-        .hero {
-            display: flex;
-            align-items: center;
-            padding: 4rem 1rem 2rem;
-            gap: 2rem;
-            flex-wrap: wrap;
-        }
+.hero {
+    display: flex;
+    align-items: center;
+    padding: 4rem 1rem 2rem;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
 
-        .hero img {
-            border-radius: 12px;
-            width: 200px;
-            height: 200px;
-            object-fit: cover;
-            border: 4px solid var(--accent);
-        }
+.hero img {
+    border-radius: 12px;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border: 4px solid var(--accent);
+}
 
-        .hero-text {
-            max-width: 800px;
-			display: flex;
-			align-items: center;
-			gap: 0.3rem;
-			flex-wrap: wrap;
-        }
+.hero-text {
+    max-width: 800px;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
 
-        .hero-text h1 {
-            font-size: 2.5rem;
-            color: var(--accent);
-            margin-right: 1rem;
-        }
+.hero-text h1 {
+    font-size: 2.5rem;
+    color: var(--accent);
+    margin-right: 0rem;
+}
 
-        .hero-text .title {
-            font-size: 1.2rem;
-            color: var(--text-light);
-            min-height: 1.5em;
-            background-color: rgba(0, 119, 182, 0.2);
-            padding: 0.2rem 0.5rem;
-            border-radius: 5px;
-            display: inline-block;
-            white-space: nowrap;
-            overflow: hidden;
-        }
+.hero-text .title {
+    font-size: 1.2rem;
+    color: var(--text-light);
+    min-height: 1.5em;
+    background-color: rgba(0, 119, 182, 0.2);
+    padding: 0.2rem 0.5rem;
+    border-radius: 5px;
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+}
 
-        .hero-text p {
-            font-size: 1rem;
-            color: var(--text-light);
-            margin: 0;
-			max-width: 1000px;
-        }
+.hero-text p {
+    font-size: 1rem;
+    color: var(--text-light);
+    margin: 0;
+    max-width: 1000px;
+}
 
-        .social-icons {
-            margin-top: 1rem;
-        }
+.social-icons {
+    margin-top: 1rem;
+}
 
-        .social-icons a {
-            margin: 0 10px;
-            color: var(--accent);
-            font-size: 1.8rem;
-            transition: color 0.3s;
-        }
+.social-icons a {
+    margin: 0 10px;
+    color: var(--accent);
+    font-size: 1.8rem;
+    transition: color 0.3s;
+}
 
-        .social-icons a:hover {
-            color: #00b4d8;
-        }
+.social-icons a:hover {
+    color: #00b4d8;
+}
 
-        section {
-            padding: 3rem 1.5rem;
-            max-width: 1100px;
-            margin: auto;
-        }
+section {
+    padding: 3rem 1.5rem;
+    max-width: 1100px;
+    margin: auto;
+}
 
-        h2 {
-            font-size: 2rem;
-            margin-bottom: 1rem;
-            color: var(--accent);
-            border-bottom: 2px solid var(--accent);
-            padding-bottom: 0.5rem;
-        }
+h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--accent);
+    border-bottom: 2px solid var(--accent);
+    padding-bottom: 0.5rem;
+}
 
-         .certifications, .services, .experience {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-            gap: 1.5rem;
-            margin-top: 1.5rem;
-        }
-		
-		.skills{
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-            gap: 1.5rem;
-            margin-top: 1.5rem;
-        }
-		
-		.projects {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-            gap: 1.5rem;
-            margin-top: 1.5rem;
-        }
+.certifications, .services, .experience {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
 
-        .card {
-            background-color: var(--secondary);
-            padding: 1.5rem;
-            border-radius: 12px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-            transition: transform 0.2s ease-in-out;
-        }
+.skills {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
 
-        .card:hover {
-            transform: translateY(-5px);
-        }
+.projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
 
-        .card i {
-            display: block;
-            font-size: 1.5rem;
-            margin-bottom: 0.5rem;
-            color: var(--accent);
-        }
+.card {
+    background-color: var(--secondary);
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: transform 0.2s ease-in-out;
+}
 
-        .card ul {
-            list-style-type: disc;
-            margin-left: 1.5rem;
-        }
+.card:hover {
+    transform: translateY(-5px);
+}
 
-        form {
-            display: grid;
-            gap: 1rem;
-            max-width: 800px;
-            margin: auto;
-        }
+.card i {
+    display: block;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--accent);
+}
 
-        .form-row {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 1rem;
-        }
+.card ul {
+    list-style-type: disc;
+    margin-left: 1.5rem;
+}
 
-        input, textarea {
-            padding: 0.75rem;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            font-size: 1rem;
-            width: 100%;
-        }
+form {
+    display: grid;
+    gap: 1rem;
+    max-width: 800px;
+    margin: auto;
+}
 
-        textarea {
-            resize: vertical;
-        }
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
 
-        .button-container {
-            display: flex;
-            justify-content: flex-end;
-        }
+input, textarea {
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    width: 100%;
+}
 
-        button {
-            background-color: var(--accent);
-            color: var(--text-light);
-            border: none;
-            padding: 0.5rem 1rem;
-            cursor: pointer;
-            border-radius: 5px;
-            font-weight: bold;
-            transition: background-color 0.3s;
-            font-size: 0.9rem;
-        }
+textarea {
+    resize: vertical;
+}
 
-        button:hover {
-            background-color: #0096c7;
-        }
-        footer {
-            text-align: center;
-            padding: 1.5rem;
-            background-color: var(--secondary);
-            font-size: 0.9rem;
-            margin-top: 3rem;
-        }
+.button-container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+button {
+    background-color: var(--accent);
+    color: var(--text-light);
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    font-size: 0.9rem;
+}
+
+button:hover {
+    background-color: #0096c7;
+}
+
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    background-color: var(--secondary);
+    font-size: 0.9rem;
+    margin-top: 3rem;
+}
 
 @media (max-width: 768px) {
     nav {
         /* Remove flex-direction: column to keep it horizontal */
         padding: 0.5rem;
-		overflow-x: auto;
-    white-space: nowrap;
+        overflow-x: auto;
+        white-space: nowrap;
     }
+
     nav a {
         padding: 0.5rem; /* Reduce padding for smaller screens */
         font-size: 0.9rem; /* Slightly smaller font size */
     }
+
     .hero {
         flex-direction: column;
     }
+
     .hero-text h1 {
         font-size: 2rem;
     }
+
     h2 {
         font-size: 1.5rem;
     }
+
     .form-row {
         grid-template-columns: 1fr;
+    }
+
+    .hero-text {
+        flex-direction: column; /* Stack elements vertically on small screens */
+        align-items: center; /* Center the text */
+    }
+
+    .hero-text .title {
+        margin-top: 0rem; /* Add some space between the title and the name */
     }
 }
 
@@ -383,6 +399,7 @@
     <section id="certifications">
         <h2>Certifications</h2>
         <div class="certifications">
+            <div class="card"><b>CompTIA Security+</b></div>
             <div class="card"><b>EC-Council Certified Incident Handler (ECIH)</b></div>
             <div class="card"><b>ISC2 Certified in Cybersecurity (CC)</b></div>
 			<div class="card"><b>Microsoft SC-900: Security, Compliance, and Identity Fundamentals</b></div>
