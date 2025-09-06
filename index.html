@@ -1,513 +1,322 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sarwar Alam | Cybersecurity Specialist</title>
-    <style>
-  :root {
-    --primary: #0d1b2a;
-    --secondary: #1b263b;
-    --accent: #0077b6;
-    --text-light: #e0e1dd;
-    --text-dark: #000;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
-}
-
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: var(--primary);
-    color: var(--text-light);
-    line-height: 1.6;
-}
-
-nav {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    background-color: var(--primary);
-    padding: 1rem;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.3);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
-
-nav a {
-    color: var(--text-light);
-    padding: 1rem;
-    text-decoration: none;
-    font-weight: 500;
-    transition: all 0.3s ease-in-out;
-}
-
-nav a:hover {
-    color: var(--accent);
-}
-
-.hero {
-    display: flex;
-    align-items: center;
-    padding: 4rem 1rem 2rem;
-    gap: 2rem;
-    flex-wrap: wrap;
-}
-
-.hero img {
-    border-radius: 12px;
-    width: 200px;
-    height: 200px;
-    object-fit: cover;
-    border: 4px solid var(--accent);
-}
-
-.hero-text {
-    max-width: 800px;
-    display: flex;
-    align-items: center;
-    gap: 0.3rem;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-}
-
-.hero-text h1 {
-    font-size: 2.5rem;
-    color: var(--accent);
-    margin-right: 0rem;
-}
-
-.hero-text .title {
-    font-size: 1.2rem;
-    color: var(--text-light);
-    min-height: 1.5em;
-    background-color: rgba(0, 119, 182, 0.2);
-    padding: 0.2rem 0.5rem;
-    border-radius: 5px;
-    display: inline-block;
-    white-space: nowrap;
-    overflow: hidden;
-}
-
-.hero-text p {
-    font-size: 1rem;
-    color: var(--text-light);
-    margin: 0;
-    max-width: 1000px;
-}
-
-.social-icons {
-    margin-top: 1rem;
-}
-
-.social-icons a {
-    margin: 0 10px;
-    color: var(--accent);
-    font-size: 1.8rem;
-    transition: color 0.3s;
-}
-
-.social-icons a:hover {
-    color: #00b4d8;
-}
-
-section {
-    padding: 3rem 1.5rem;
-    max-width: 1100px;
-    margin: auto;
-}
-
-h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-    color: var(--accent);
-    border-bottom: 2px solid var(--accent);
-    padding-bottom: 0.5rem;
-}
-
-.certifications, .services, .experience {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 1.5rem;
-    margin-top: 1.5rem;
-}
-
-.skills {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-    gap: 1.5rem;
-    margin-top: 1.5rem;
-}
-
-.projects {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    gap: 1.5rem;
-    margin-top: 1.5rem;
-}
-
-.card {
-    background-color: var(--secondary);
-    padding: 1.5rem;
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    transition: transform 0.2s ease-in-out;
-}
-
-.card:hover {
-    transform: translateY(-5px);
-}
-
-.card i {
-    display: block;
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
-    color: var(--accent);
-}
-
-.card ul {
-    list-style-type: disc;
-    margin-left: 1.5rem;
-}
-
-form {
-    display: grid;
-    gap: 1rem;
-    max-width: 800px;
-    margin: auto;
-}
-
-.form-row {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1rem;
-}
-
-input, textarea {
-    padding: 0.75rem;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 1rem;
-    width: 100%;
-}
-
-textarea {
-    resize: vertical;
-}
-
-.button-container {
-    display: flex;
-    justify-content: flex-end;
-}
-
-button {
-    background-color: var(--accent);
-    color: var(--text-light);
-    border: none;
-    padding: 0.5rem 1rem;
-    cursor: pointer;
-    border-radius: 5px;
-    font-weight: bold;
-    transition: background-color 0.3s;
-    font-size: 0.9rem;
-}
-
-button:hover {
-    background-color: #0096c7;
-}
-
-footer {
-    text-align: center;
-    padding: 1.5rem;
-    background-color: var(--secondary);
-    font-size: 0.9rem;
-    margin-top: 3rem;
-}
-
-@media (max-width: 768px) {
-    nav {
-        /* Remove flex-direction: column to keep it horizontal */
-        padding: 0.5rem;
-        overflow-x: auto;
-        white-space: nowrap;
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sarwar A. Sajib</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lora:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: "Lora", serif;
+      margin: 0;
+      padding: 0;
+      background: #ffffff;
+      color: #1a1a1a;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      align-items: center;
+    }
+    .container {
+      max-width: 800px;
+      width: 95%;
+      padding: 2rem 1rem;
+      text-align: left;
+      flex: 1;
     }
 
-    nav a {
-        padding: 0.5rem; /* Reduce padding for smaller screens */
-        font-size: 0.9rem; /* Slightly smaller font size */
+    /* Header */
+    header {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      margin-bottom: 1.5rem;
+      position: relative;
+    }
+    header .menu {
+      align-self: flex-end;
+      margin-bottom: 1rem;
+    }
+    header h1 {
+      font-family: "Playfair Display", serif;
+      font-size: 2.8rem;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      margin: 0;
+      color: #1a1a1a;
     }
 
-    .hero {
+    /* Menu */
+    .menu button {
+      background: none;
+      border: none;
+      font-size: 1.4rem;
+      color: #1a1a1a;
+      cursor: pointer;
+      transition: color 0.3s ease;
+    }
+    .menu button:hover {
+      color: #4a4a4a;
+    }
+    .menu-content {
+      display: none;
+      position: absolute;
+      right: 0;
+      top: 2rem;
+      background: #ffffff;
+      border: 1px solid #e0e0e0;
+      border-radius: 6px;
+      min-width: 120px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      z-index: 1000;
+    }
+    .menu-content a {
+      display: block;
+      padding: 0.7rem 1rem;
+      color: #1a1a1a;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 1rem;
+      transition: background 0.3s ease;
+    }
+    .menu-content a:hover {
+      background: #f5f5f5;
+    }
+    .menu:hover .menu-content {
+      display: block;
+    }
+
+    /* About section */
+    .about {
+      display: flex;
+      gap: 1.5rem;
+      align-items: center;
+      margin: 1.5rem 0;
+      padding: 1rem;
+    }
+    .about img {
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 2px solid #e0e0e0;
+      transition: transform 0.3s ease;
+    }
+    .about img:hover {
+      transform: scale(1.05);
+    }
+    .about-info p {
+      margin: 0.5rem 0;
+      font-size: 1rem;
+      line-height: 1.6;
+      color: #333;
+    }
+    .about-info a {
+      color: #2c5282;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+    .about-info a:hover {
+      color: #4a4a4a;
+      text-decoration: underline;
+    }
+
+    /* Divider line */
+    .divider {
+      border-top: 1px solid #e0e0e0;
+      margin: 1.5rem 0;
+    }
+
+    /* Certifications */
+    .certs {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+      gap: 1.2rem;
+      justify-items: center;
+      padding: 1rem;
+	  margin-bottom: 20px;
+    }
+    .certs img {
+      height: 110px;
+      object-fit: contain;
+      transition: transform 0.3s ease;
+    }
+    .certs img:hover {
+      transform: scale(1.1);
+    }
+
+    /* Contact */
+    .contact h2 {
+      margin: 0 0 1rem 0;
+      font-size: 1.4rem;
+      color: #1a1a1a;
+      font-family: "Playfair Display", serif;
+    }
+    .contact form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      padding: 1rem;
+    }
+    .contact input, .contact textarea {
+      width: 100%;
+      padding: 0.8rem;
+      border: 1px solid #e0e0e0;
+      border-radius: 6px;
+      font-size: .8rem;
+      background: #f9f9f9;
+      color: #333;
+      transition: border-color 0.3s ease;
+    }
+    .contact input:focus, .contact textarea:focus {
+      outline: none;
+      border-color: #2c5282;
+    }
+    .contact textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+    .contact button {
+      width: fit-content;
+      background: #2c5282;
+      color: #ffffff;
+      border: none;
+      padding: 0.8rem 2rem;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 1rem;
+      transition: background 0.3s ease;
+    }
+    .contact button:hover {
+      background: #4a4a4a;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 1rem 0;
+      font-size: 0.9rem;
+      color: #666;
+      width: 100%;
+      border-top: 1px solid #e0e0e0;
+    }
+
+    /* Responsive */
+    @media (max-width: 560px) {
+      .about {
         flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+      .about img {
+        width: 100px;
+        height: 100px;
+      }
+      header h1 {
+        font-size: 2.2rem;
+      }
+      .menu {
+        align-self: flex-end;
+        margin-bottom: 0.5rem;
+      }
     }
-
-    .hero-text h1 {
-        font-size: 2rem;
-    }
-
-    h2 {
-        font-size: 1.5rem;
-    }
-
-    .form-row {
-        grid-template-columns: 1fr;
-    }
-
-    .hero-text {
-        flex-direction: column; /* Stack elements vertically on small screens */
-        align-items: center; /* Center the text */
-    }
-
-    .hero-text .title {
-        margin-top: 0rem; /* Add some space between the title and the name */
-    }
-}
-
-    </style>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  </style>
 </head>
-
 <body>
-    <nav>
-        <a href="#hero">Home</a>
-        <a href="#services">Services</a>
-        <a href="#experience">Experience</a>
-        <a href="#education">Education</a>
-        <a href="#certifications">Certifications</a>
-        <a href="#projects">Projects</a>
-    </nav>
-
-    <section class="hero" id="hero">
-        <img src="profile.png" alt="Sarwar Alam">
-        <div class="hero-text">
-            <h1>Sarwar Alam S.</h1>
-            <div class="title" id="rotating-title"></div>
-            <p>Cybersecurity professional with 4+ years of experience in safeguarding systems and enhancing application security, I specialize in incident handling and developing secure solutions. Holding certifications such as Security+, E|CIH, ISC2 CC, Microsoft SC-900, and Microsoft AZ-900, along with a Master’s in Cybersecurity from DTU, I offer expertise to help businesses strengthen their overall cybersecurity posture.</p>
-            <div class="social-icons">
-                <a href="https://www.linkedin.com/in/sarwaralamsajib/" target="_blank"><i class="fab fa-linkedin"></i></a>
-                <a href="https://github.com/sarwaralamsb" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="mailto:sarwaralampro@gmail.com"><i class="fas fa-envelope"></i></a>
-            </div>
+  <div class="container">
+    <header>
+      <div class="menu">
+        <button>☰</button>
+        <div class="menu-content">
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
         </div>
+      </div>
+      <h1>Sarwar A. Sajib</h1>
+    </header>
+
+    <!-- ABOUT -->
+    <section id="about" class="about">
+      <img src="propic.jpg" alt="Profile Picture"/>
+      <div class="about-info">
+        <p>Cyber Security Specialist at the <a href="https://sentia.com/dk/" target="_blank">Sentia Denmark</a></p>
+        <p>Connect with me in Linkedin: <a href="https://www.linkedin.com/in/sarwaralamsajib" target="_blank" rel="noopener">linkedin.com/in/sarwaralamsajib</a></p>
+        <p>Follow me on Github: <a href="https://github.com/sarwaralamsb" target="_blank" rel="noopener">github.com/sarwaralamsb</a></p>
+      </div>
     </section>
 
+    <div class="divider"></div>
 
-<section id="services">
-    <h2>Expertise & Services</h2>
-    <div class="services">
-        <div class="card">
-            <i class="fas fa-shield-alt"></i><b>Incident Handling & Response</b>
-            <p>Skilled in detecting, analyzing, containing, and recovering from cyber incidents, applying frameworks like NIST and MITRE ATT&CK to ensure effective response strategies.</p>
-        </div>
-        <div class="card">
-            <i class="fas fa-chalkboard-teacher"></i><b>Security Awareness Training</b>
-            <p>Experienced in developing and delivering phishing simulations and training programs to enhance employee awareness and resilience against social engineering threats.</p>
-        </div>
-        <div class="card">
-            <i class="fas fa-search"></i> <b>Vulnerability Assessment & Threat Hunting</b>
-            <p>Proficient in identifying and analyzing system vulnerabilities using tools like Nmap, Nessus, and MITRE ATT&CK, with a focus on proactive threat hunting to mitigate risks.</p>
-        </div>
-        <div class="card">
-            <i class="fas fa-file-alt"></i> <b>Security Documentation & Compliance</b>
-            <p>Adept at creating security policies, procedures, and incident response playbooks that align with standards like ISO 27001, NIST, and GDPR to support organizational compliance.</p>
-        </div>
-        <div class="card">
-            <i class="fas fa-user-shield"></i> <b>Identity & Access Management (IAM)</b>
-            <p>Knowledgeable in implementing secure authentication, role-based access controls, and privileged access management to protect sensitive data and systems.</p>
-        </div>
-	<div class="card">
-            <i class="fas fa-code"></i> <b>Secure Application Development</b>
-            <p>Proficient in Python, SQL, Java, XML, C#, HTML, CSS, and JavaScript, I specialize in developing and enhancing robust, scalable mobile applications, web apps, and enterprise software tailored to meet business needs.</p>
-        </div>
-        <!--<div class="card">
-            <i class="fas fa-chart-line"></i> <b>Data Analysis & Reporting</b>
-            <p>Skilled in leveraging Python, Pandas, and SQL to analyze and visualize cybersecurity data, enabling informed decision-making and strategic reporting.</p>
-        </div>-->
-        <div class="card">
-            <i class="fas fa-headset"></i> <b>Technical Support & Endpoint Security</b>
-            <p>Experienced in providing technical support, securing endpoint configurations, and managing malware defense and patch management across Windows, macOS, and Linux environments.</p>
-        </div>
-	<div class="card">
-            <i class="fas fa-bullhorn"></i> <b>Sponsored Promotion</b>
-            <p>Promoting cybersecurity products and services to IT and security audiences through targeted content, campaigns, and brand awareness initiatives.</p>
-        </div>    
-    </div>
-</section>
-
-
-<section id="experience">
-    <h2>Experience</h2>
-    <div class="experience">
-        <div class="card">
-            <strong>Sentia (2025 - Present)</strong>
-            <p><strong>Cyber Security Specialist</strong> - Ballerup, Denmark</p>
-        </div>
-        <div class="card">
-            <strong>Pelican Self Storage (2022-2025)</strong>
-            <p><strong>IT Application Assistant</strong> - Virum, Denmark</p>
-        </div>
-        <div class="card">
-            <strong>Netizen Testing (2018-2019)</strong>
-            <p><strong>QA Engineer</strong> - Remote</p>
-        </div>
-        <div class="card">
-            <strong>Internexia (2018-2019)</strong>
-            <p><strong>Android Developer Intern</strong> - Malaysia</p>
-        </div>
-    </div>
-</section>
-
-    <section id="education">
-        <h2>Education</h2>
-        <p>
-            <strong>MSc in Computer Science & Engineering (Cybersecurity)</strong><br>
-            <b>Technical University of Denmark</b>, 2021–2023<br>
-            Courses: Data Security, Computer Security Incident Response, Network Security,
-			Computer Security Forensic, Modern Cryptology, Applied Cryptography, Ethical Hacking,
-			Current Topics in System Security, Biometric Systems, 
-			Formal Aspects of Software Engineering,
-			Foundations of distributed systems, 
-			Logical Systems and Logic Programming, 
-			Model-Based Systems Engineering, System integration, 
-			TEMO (Technology, management, organisation and business models).<br><br>
-
-            <strong>BSc in Computer Science</strong><br>
-            <b>Limkokwing University of Creative Technology</b>, 2016–2019<br>
-            Focused on Software Development, Cybersecurity, and Mobile Application Design
-        </p>
+    <!-- CERTIFICATIONS -->
+    <section class="certs">
+      <img src="cert_1.png" alt="Certification 1"/>
+      <img src="ecih.png" alt="ECIH Certification"/>
+      <img src="cert_3.png" alt="Certification 3"/>
+      <img src="az900.png" alt="AZ-900 Certification"/>
+      <img src="sc900.png" alt="SC-900 Certification"/>
+      <img src="acp.png" alt="ACP Certification"/>
+      <img src="ftia.png" alt="FTIA Certification"/>
+      <img src="ics.png" alt="ICS Certification"/>
     </section>
 
-    <section id="certifications">
-        <h2>Certifications</h2>
-        <div class="certifications">
-			<div class="card"><b>APIsec Certified Practitioner (ACP)</b></div>
-	        <div class="card"><b>CompTIA Security+ Certified</b></div>
-	        <div class="card"><b>EC-Council Certified Incident Handler (ECIH)</b></div>
-	        <div class="card"><b>ISC2 Certified in Cybersecurity (CC)</b></div>
-		    <div class="card"><b>Microsoft SC-900: Security, Compliance, and Identity Fundamentals</b></div>
-		    <div class="card"><b>Microsoft AZ-900: Azure Fundamentals</b></div>
-		    <div class="card"><b>DTU Certified Cybersecurity Specialist</b></div>
-	        <div class="card"><b>Splunk Engineer</b>, LetsDefend</div>
-	        <div class="card"><b>Threat Intelligence Analyst</b>, arcX</div>
-		    <div class="card"><b>Foundations of Threat Hunting</b>, Picus Security</div>
-		    <div class="card"><b>Cybersecurity Essentials</b>, Cisco</div>
-		    <!--<div class="card"><b>Microsoft SC-300: Identity & Access Administrator</b> (Ongoing)</div>-->
-        </div>
+    <div class="divider"></div>
+
+    <!-- CONTACT -->
+    <section id="contact" class="contact">
+      <h2>Contact Me</h2>
+      <form id="contact-form">
+        <input type="text" name="name" placeholder="Your Name" required/>
+        <input type="email" name="email" placeholder="Your Email" required/>
+        <textarea name="message" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
     </section>
+  </div>
 
-    <section id="projects">
-        <h2>Projects</h2>
-        <div class="projects">
-			<div class="card">
-                <strong>Secure Mobile Application Development at Appera Apps (Google Play Store)</strong><br>
-                <ul>
-                    <li>I develop data-driven Android apps with Kotlin, Java, and Android SDK, handling the full lifecycle with API integration, analytics, security, Git, and Agile.</li>
-                </ul>
-            </div>
-            <div class="card">
-                <strong>Password Generator and Strength Analyzer</strong><br>
-                <ul>
-                    <li>Built a Streamlit app for password strength analysis and generation using Python.</li>
-                </ul>
-            </div>
-            <div class="card">
-                <strong>Basic HTTP Firewall Server with Malicious Header Detection</strong><br>
-                <ul>
-<li>Created an HTTP firewall to detect and block malicious headers with customizable rules.</li>
+  <footer>
+    &copy; 2025 Sarwar A. Sajib. All rights reserved.
+  </footer>
 
-                </ul>
-            </div>
-            <div class="card">
-                <strong>Predictive Analytics for Security Incident Classification</strong><br>
-                <ul>
-                  <li>Developed a model to classify cybersecurity incidents using logistic regression in Python.</li>
-                </ul>
-            </div>
-            <div class="card">
-                <strong>Master’s Thesis: Fuzzing Smart Contracts in Blockchain</strong><br>
-                <ul>
-                    <li>Designed E2Bfuzzer, a smart contract fuzzer for Ethereum using Bytecode, ABI, and Mythril.</li>
-                </ul>
-            </div>
-            <div class="card">
-                <strong>Detection of Synthetic Face Images Generated by GANs</strong><br>
-                <ul>
-                    <li>Reviewed and compared GAN-generated face detection methods, focusing on social media privacy risks.</li>
-                </ul>
-            </div>
-            <div class="card">
-                <strong>Enhancing User Privacy in Public Transport Systems</strong><br>
-                <ul>
-					<li>Designed a pseudonym-based public transport system to enhance user privacy and billing accuracy.</li>
-                </ul>
-            </div>
-            <div class="card">
-                <strong>Wireless Sensor Network for Wildfire Detection</strong><br>
-                <ul>
-                    <li>Built a wildfire detection system using LoRa mesh network in OMNET++ for early alerts.</li>
-                </ul>
-            </div>
-            <div class="card">
-                <strong>IoT Ransomware Detection Using Fog Layer Security</strong><br>
-                <ul>
-					<li>Created a fog-layer-based ML system to detect and block IoT ransomware via Opcode analysis.</li>
-                </ul>
-            </div>
-            <div class="card">
-                <strong>Implementing Access Control in Client/Server Applications</strong><br>
-                <ul>
-					<li>Implemented ACL and RBAC in a print server for secure role-based access control.</li>
-                </ul>
-            </div>
-        </div>
-    </section>
+<!-- EmailJS SDK -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
-    <footer>
-        <p>© 2025 Sarwar Alam. All rights reserved.</p>
-    </footer>
+<script type="text/javascript">
+  // Initialize EmailJS
+  emailjs.init('3436M8qqEq9k98PXx');
 
-    <script>
-        const titles = [
-            "Cybersecurity Specialist", "SOC Analyst", "Certified Incident Handler", "MSc. in Cybersecurity", "Software Developer"
-        ];
-        let currentTitleIndex = 0;
-        const titleElement = document.getElementById("rotating-title");
+  const form = document.getElementById('contact-form');
+  const btn = form.querySelector('button');
 
-        function typeTitle(title, callback) {
-            titleElement.textContent = "";
-            let i = 0;
-            function type() {
-                if (i < title.length) {
-                    titleElement.textContent += title.charAt(i);
-                    i++;
-                    setTimeout(type, 100); // Adjust typing speed (100ms per letter)
-                } else {
-                    setTimeout(callback, 2000); // Pause before switching to next title
-                }
-            }
-            type();
-        }
+  form.addEventListener('submit', function(event) {
+    event.preventDefault();
+    btn.textContent = 'Sending...';
+    btn.disabled = true;
 
-        function rotateTitle() {
-            const currentTitle = titles[currentTitleIndex];
-            typeTitle(currentTitle, () => {
-                currentTitleIndex = (currentTitleIndex + 1) % titles.length;
-                rotateTitle();
-            });
-        }
+    // Grab values from the form
+    const name = form.querySelector('input[name="name"]').value;
+    const email = form.querySelector('input[name="email"]').value;
+    const message = form.querySelector('textarea[name="message"]').value;
 
-        rotateTitle(); // Start the title rotation
-    </script>
+    // Send email using EmailJS with template variable names
+    emailjs.send("service_yb1pwyb", "template_bq7kcfd", {
+      name: name,
+      email: email,
+      message: message
+    })
+    .then(() => {
+      btn.textContent = 'Send Message';
+      btn.disabled = false;
+      alert('Message sent successfully!');
+      form.reset();
+    }, (err) => {
+      btn.textContent = 'Send Message';
+      btn.disabled = false;
+      alert('Failed to send message: ' + JSON.stringify(err));
+    });
+  });
+</script>
+
 </body>
-
 </html>
-
-
-
-
