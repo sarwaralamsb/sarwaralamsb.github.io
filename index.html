@@ -4,246 +4,285 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Sarwar A. Sajib</title>
+
+  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lora:wght@400;600&display=swap" rel="stylesheet">
+
   <style>
+    /* =============================
+       GLOBAL STYLES
+    ============================== */
+    :root {
+      --text: #1a1a1a;
+      --subtext: #4a4a4a;
+      --background: #ffffff;
+      --border: #e6e6e6;
+      --primary: #2c5282;
+      --primary-hover: #1f3a59;
+      --radius: 10px;
+      --shadow: 0 12px 24px rgba(0,0,0,0.06);
+    }
+
     body {
-      font-family: "Lora", serif;
       margin: 0;
       padding: 0;
-      background: #ffffff;
-      color: #1a1a1a;
+      background: var(--background);
+      font-family: "Lora", serif;
+      color: var(--text);
       display: flex;
       flex-direction: column;
-      min-height: 100vh;
       align-items: center;
     }
+
     .container {
-      max-width: 800px;
       width: 95%;
+      max-width: 900px;
       padding: 2rem 1rem;
-      text-align: left;
-      flex: 1;
     }
 
-    /* Header */
+    /* =============================
+       HEADER + MENU
+    ============================== */
     header {
       display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      margin-bottom: 1.5rem;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 3rem;
       position: relative;
     }
-    header .menu {
-      align-self: flex-end;
-      margin-bottom: 1rem;
-    }
-    header h1 {
+
+    h1 {
       font-family: "Playfair Display", serif;
-      font-size: 2.8rem;
-      font-weight: 700;
-      letter-spacing: 1.5px;
+      font-size: 3rem;
       margin: 0;
-      color: #1a1a1a;
+      font-weight: 700;
+      letter-spacing: 1px;
     }
 
-    /* Menu */
     .menu button {
       background: none;
       border: none;
-      font-size: 1.4rem;
-      color: #1a1a1a;
+      font-size: 1.8rem;
       cursor: pointer;
-      transition: color 0.3s ease;
+      color: var(--text);
+      transition: opacity 0.3s ease;
     }
     .menu button:hover {
-      color: #4a4a4a;
+      opacity: 0.6;
     }
+
     .menu-content {
       display: none;
       position: absolute;
       right: 0;
-      top: 2rem;
-      background: #ffffff;
-      border: 1px solid #e0e0e0;
-      border-radius: 6px;
-      min-width: 120px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      z-index: 1000;
+      top: 3rem;
+      background: var(--background);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 0.5rem 0;
+      width: 150px;
+      animation: fadeIn 0.2s ease;
     }
+
     .menu-content a {
       display: block;
-      padding: 0.7rem 1rem;
-      color: #1a1a1a;
+      padding: 0.8rem 1rem;
       text-decoration: none;
-      font-weight: 500;
-      font-size: 1rem;
+      color: var(--text);
       transition: background 0.3s ease;
     }
+
     .menu-content a:hover {
-      background: #f5f5f5;
+      background: #f4f4f4;
     }
-    .menu:hover .menu-content {
+
+    .menu.open .menu-content {
       display: block;
     }
 
-    /* About section */
+    /* =============================
+       ABOUT SECTION
+    ============================== */
     .about {
       display: flex;
-      gap: 1.5rem;
+      gap: 2rem;
       align-items: center;
-      margin: 1.5rem 0;
-      padding: 1rem;
+      padding: 2rem 0;
     }
+
     .about img {
-      width: 120px;
-      height: 120px;
-      object-fit: cover;
+      width: 140px;
+      height: 140px;
       border-radius: 50%;
-      border: 2px solid #e0e0e0;
-      transition: transform 0.3s ease;
+      object-fit: cover;
+      border: 2px solid var(--border);
+      transition: transform .3s ease, box-shadow .3s ease;
     }
+
     .about img:hover {
       transform: scale(1.05);
+      box-shadow: var(--shadow);
     }
+
     .about-info p {
-      margin: 0.5rem 0;
-      font-size: 1rem;
-      line-height: 1.6;
-      color: #333;
+      margin: 0.7rem 0;
+      line-height: 1.7;
+      font-size: 1.05rem;
+      color: var(--subtext);
     }
+
     .about-info a {
-      color: #2c5282;
-      text-decoration: none;
+      color: var(--primary);
       font-weight: 600;
-      transition: color 0.3s ease;
+      text-decoration: none;
     }
     .about-info a:hover {
-      color: #4a4a4a;
+      color: var(--primary-hover);
       text-decoration: underline;
     }
 
-    /* Divider line */
+    /* Divider */
     .divider {
-      border-top: 1px solid #e0e0e0;
-      margin: 1.5rem 0;
+      border-top: 1px solid var(--border);
+      margin: 2rem 0;
     }
 
-    /* Certifications */
+    /* =============================
+       CERTIFICATIONS
+    ============================== */
     .certs {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-      gap: 1.2rem;
+      grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+      gap: 2rem;
+      padding: 1rem 0 2rem 0;
       justify-items: center;
-      padding: 1rem;
-	  margin-bottom: 20px;
-    }
-    .certs img {
-      height: 110px;
-      object-fit: contain;
-      transition: transform 0.3s ease;
-    }
-    .certs img:hover {
-      transform: scale(1.1);
     }
 
-    /* Contact */
-    .contact h2 {
-      margin: 0 0 0.6rem 0;
-      font-size: 1.4rem;
-      color: #1a1a1a;
-      font-family: "Playfair Display", serif;
+    .certs img {
+      height: 120px;
+      object-fit: contain;
+      transition: transform 0.25s ease;
     }
+
+    .certs img:hover {
+      transform: translateY(-5px);
+    }
+
+    /* =============================
+       CONTACT FORM
+    ============================== */
+    .contact h2 {
+      font-family: "Playfair Display", serif;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      font-weight: 700;
+    }
+
     .contact form {
       display: flex;
       flex-direction: column;
-      gap: 1rem;
-      padding: 1rem;
+      gap: 1.2rem;
     }
-    .contact input, .contact textarea {
-      width: 100%;
-      padding: 0.8rem;
-      border: 1px solid #e0e0e0;
-      border-radius: 6px;
-      font-size: .8rem;
-      background: #f9f9f9;
-      color: #333;
-      transition: border-color 0.3s ease;
-    }
-    .contact input:focus, .contact textarea:focus {
-      outline: none;
-      border-color: #2c5282;
-    }
+
+    .contact input,
     .contact textarea {
-      resize: vertical;
-      min-height: 100px;
+      width: 100%;
+      padding: 1rem;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      font-size: 1rem;
+      background: #fafafa;
+      transition: border-color .3s ease, background .3s ease;
     }
+
+    .contact input:focus,
+    .contact textarea:focus {
+      outline: none;
+      border-color: var(--primary);
+      background: white;
+    }
+
     .contact button {
       width: fit-content;
-      background: #2c5282;
-      color: #ffffff;
-      border: none;
       padding: 0.8rem 2rem;
-      border-radius: 6px;
-      cursor: pointer;
-      font-weight: 600;
+      border-radius: var(--radius);
+      border: none;
+      background: var(--primary);
+      color: white;
       font-size: 1rem;
-      transition: background 0.3s ease;
-    }
-    .contact button:hover {
-      background: #4a4a4a;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background .3s ease, transform .2s ease;
     }
 
-    /* Footer */
+    .contact button:hover {
+      background: var(--primary-hover);
+      transform: translateY(-2px);
+    }
+
+    /* FOOTER */
     footer {
       text-align: center;
-      padding: 1rem 0;
-      font-size: 0.9rem;
-      color: #666;
+      padding: 2rem 0;
+      font-size: 0.95rem;
+      color: #777;
+      margin-top: 3rem;
+      border-top: 1px solid var(--border);
       width: 100%;
-      border-top: 1px solid #e0e0e0;
     }
 
-    /* Responsive */
-    @media (max-width: 560px) {
+    /* =============================
+       RESPONSIVE DESIGN
+    ============================== */
+    @media (max-width: 650px) {
       .about {
         flex-direction: column;
-        align-items: center;
         text-align: center;
       }
+
+      h1 {
+        font-size: 2.4rem;
+      }
+
       .about img {
-        width: 100px;
-        height: 100px;
+        width: 120px;
+        height: 120px;
       }
-      header h1 {
-        font-size: 2.2rem;
-      }
-      .menu {
-        align-self: flex-end;
-        margin-bottom: 0.5rem;
-      }
+    }
+
+    /* Menu animation */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-5px); }
+      to { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
+
 <body>
+
   <div class="container">
+
     <header>
-      <div class="menu">
+      <h1>Sarwar A. Sajib</h1>
+
+      <!-- Modern Dropdown -->
+      <div class="menu" id="menu">
         <button>☰</button>
         <div class="menu-content">
           <a href="#about">About</a>
           <a href="#contact">Contact</a>
         </div>
       </div>
-      <h1>Sarwar A. Sajib</h1>
     </header>
 
     <!-- ABOUT -->
     <section id="about" class="about">
-      <img src="propic.jpg" alt="Profile Picture"/>
+      <img src="propic.jpg" alt="Profile Picture">
       <div class="about-info">
-        <p>Cyber Security Specialist at the <a href="https://sentia.com/dk/" target="_blank">Sentia Denmark</a></p>
-        <p>Connect with me on Linkedin: <a href="https://www.linkedin.com/in/sarwaralamsajib" target="_blank" rel="noopener">linkedin.com/in/sarwaralamsajib</a></p>
-        <p>Follow me on Github: <a href="https://github.com/sarwaralamsb" target="_blank" rel="noopener">github.com/sarwaralamsb</a></p>
+        <p>Cyber Security Specialist at <a href="https://sentia.com/dk/" target="_blank">Sentia Denmark</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/sarwaralamsajib" target="_blank">linkedin.com/in/sarwaralamsajib</a></p>
+        <p>GitHub: <a href="https://github.com/sarwaralamsb" target="_blank">github.com/sarwaralamsb</a></p>
       </div>
     </section>
 
@@ -251,14 +290,14 @@
 
     <!-- CERTIFICATIONS -->
     <section class="certs">
-      <img src="cert_1.png" alt="Certification 1"/>
-      <img src="ecih.png" alt="ECIH Certification"/>
-      <img src="cert_3.png" alt="Certification 3"/>
-      <img src="az900.png" alt="AZ-900 Certification"/>
-      <img src="sc900.png" alt="SC-900 Certification"/>
-      <img src="acp.png" alt="ACP Certification"/>
-      <img src="FTIA.png" alt="FTIA Certification"/>
-      <img src="ics.png" alt="ICS Certification"/>
+      <img src="cert_1.png" alt="Certification 1">
+      <img src="ecih.png" alt="ECIH Certification">
+      <img src="cert_3.png" alt="Certification 3">
+      <img src="az900.png" alt="AZ-900 Certification">
+      <img src="sc900.png" alt="SC-900 Certification">
+      <img src="acp.png" alt="ACP Certification">
+      <img src="FTIA.png" alt="FTIA Certification">
+      <img src="ics.png" alt="ICS Certification">
     </section>
 
     <div class="divider"></div>
@@ -267,61 +306,67 @@
     <section id="contact" class="contact">
       <h2>Contact Me</h2>
       <form id="contact-form">
-        <input type="text" name="name" placeholder="Your Name" required/>
-        <input type="email" name="email" placeholder="Your Email" required/>
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
         <textarea name="message" placeholder="Your Message" required></textarea>
         <button type="submit">Send Message</button>
       </form>
     </section>
+
   </div>
 
   <footer>
-    &copy; 2025 Sarwar A. Sajib. All rights reserved.
+    © 2025 Sarwar A. Sajib — All rights reserved.
   </footer>
 
-<!-- EmailJS SDK -->
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <!-- EmailJS -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
-<script type="text/javascript">
-  // Initialize EmailJS
-  emailjs.init('3436M8qqEq9k98PXx');
+  <script>
+    // Initialize
+    emailjs.init("3436M8qqEq9k98PXx");
 
-  const form = document.getElementById('contact-form');
-  const btn = form.querySelector('button');
+    // Menu logic
+    const menu = document.getElementById("menu");
+    const button = menu.querySelector("button");
 
-  form.addEventListener('submit', function(event) {
-    event.preventDefault();
-    btn.textContent = 'Sending...';
-    btn.disabled = true;
-
-    // Grab values from the form
-    const name = form.querySelector('input[name="name"]').value;
-    const email = form.querySelector('input[name="email"]').value;
-    const message = form.querySelector('textarea[name="message"]').value;
-
-    // Send email using EmailJS with template variable names
-    emailjs.send("service_yb1pwyb", "template_bq7kcfd", {
-      name: name,
-      email: email,
-      message: message
-    })
-    .then(() => {
-      btn.textContent = 'Send Message';
-      btn.disabled = false;
-      alert('Message sent successfully!');
-      form.reset();
-    }, (err) => {
-      btn.textContent = 'Send Message';
-      btn.disabled = false;
-      alert('Failed to send message: ' + JSON.stringify(err));
+    button.addEventListener("click", () => {
+      menu.classList.toggle("open");
     });
-  });
-</script>
+
+    // Close menu on outside click
+    document.addEventListener("click", (e) => {
+      if (!menu.contains(e.target)) menu.classList.remove("open");
+    });
+
+    // Email form
+    const form = document.getElementById("contact-form");
+    const btn = form.querySelector("button");
+
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+
+      btn.textContent = "Sending...";
+      btn.disabled = true;
+
+      const data = {
+        name: form.name.value,
+        email: form.email.value,
+        message: form.message.value,
+      };
+
+      emailjs.send("service_yb1pwyb", "template_bq7kcfd", data)
+        .then(() => {
+          alert("Message sent successfully!");
+          form.reset();
+        })
+        .catch(err => alert("Failed to send: " + JSON.stringify(err)))
+        .finally(() => {
+          btn.textContent = "Send Message";
+          btn.disabled = false;
+        });
+    });
+  </script>
 
 </body>
 </html>
-
-
-
-
-
